@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+    
+    --background: var(--almond);
+    --foreground: var(--softTerracotta);
+    --primary: var(--roseTea);
+    --primary-foreground: 0 0% 9%;
+    --secondary: var(--ivory);
+    --secondary-foreground: var(--softTerracotta);
+    --accent: var(--sageGreen);
+    --muted: var(--mutedGray);
+    --border: var(--roseTea);
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-almond text-softTerracotta;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-softTerracotta;
+  }
+  
+  button, .btn {
+    @apply bg-roseTea hover:bg-softTerracotta transition-colors;
+  }
+  
+  .card, .container-alt {
+    @apply bg-ivory;
+  }
+  
+  .highlight {
+    @apply text-sageGreen;
+  }
+  
+  .muted {
+    @apply text-mutedGray;
+  }
+}
+
+@layer utilities {
+  .section-alt {
+    @apply bg-ivory p-6 rounded-lg;
+  }
+  
+  .section-primary {
+    @apply bg-almond p-6 rounded-lg;
+  }
+  
+  .accent-border {
+    @apply border-2 border-sageGreen;
+  }
+  
+  .card-soft {
+    @apply bg-ivory p-4 rounded-lg shadow-sm;
+  }
+  
+  .btn-primary {
+    @apply bg-roseTea text-white px-4 py-2 rounded hover:bg-softTerracotta transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-sageGreen text-white px-4 py-2 rounded hover:bg-mutedGray transition-colors;
+  }
+}
